@@ -1,0 +1,64 @@
+@media screen and (min-width: 769px) {
+
+    /* Configurações gerais das Telas */
+
+    body {
+        background-attachment: scroll;
+    }
+
+    section.tela {
+        height: 30rem;
+        width: 35.5rem;
+    }
+
+    div.telaCentro {
+        width: 450px;
+        height: 300px;
+        font-size: 1.1em; 
+    }
+
+    /* Tela das câmeras */
+
+    section#telaCameras > #area-camera > video {
+        width: 490px;
+    }
+
+    section#telaCameras > p{
+        font-size: 1.2em;
+    }
+
+    /* Tela das notas */
+
+
+
+    div#area-notas > div > img {
+        width: 40px;
+    }
+
+    /* Tela Puzzles */
+
+    div#area-puzzle > div > img {
+        width: 40px;
+    }
+
+    /* Tela Chat */
+
+    #chat-perfis img {
+        width: 40px;
+    }
+
+    /* Emails */
+ 
+    .email-body {
+        height: 33rem;
+        max-width: 28rem;
+        font-size: 1.1em;
+    }
+
+    /* Enviar Email */
+
+    #send {
+        width: 50px;
+        bottom: 8px;
+    }
+}

@@ -1,0 +1,54 @@
+@keyframes descer {
+    0% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes desaparecer {
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+#notifications-body {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: 270px; /* Tamanho do telefone */
+    max-width: 98%;
+    overflow: hidden;
+    font-family: 'montserrat';
+    font-size: .9em;
+    z-index: 200;
+}
+
+.notification-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15rem;
+    height: 7rem;
+    border-radius: 10px;
+    border: 1px solid var(--highLight);
+    background-color: var(--darkerTransparent);
+    color: var(--white);
+    backdrop-filter: var(--blur);
+    animation: desaparecer 6s ease-in forwards, descer 0.2s ease-in forwards;
+}
+
+.notification-box p {
+    width: 90%;
+    text-align: center;
+}
