@@ -24,10 +24,10 @@ spanCameraNumber.innerText = 'CH1'
 cameraDiv.append(spanDate, spanCameraNumber)
 
 const camerasSrc = [
-    '../midia/camera0.mp4',
-    '../midia/camera1.mp4',
-    '../midia/camera2.mp4',
-    '../midia/camera3.mp4'
+    './midia/camera0.mp4',
+    './midia/camera1.mp4',
+    './midia/camera2.mp4',
+    './midia/camera3.mp4'
 ]
 
 let number = 0

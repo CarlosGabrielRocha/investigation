@@ -26,7 +26,7 @@ const callingSomeoneSubtitle = createTextElement('p', 'Ligação recebida')
 
 const profile = createElement('div', 'calling-profile', 'calling-profile')
 
-const profileImg = createImg('../midia/call/ligacao_perfil.svg')
+const profileImg = createImg('./midia/call/ligacao_perfil.svg')
 
 profile.appendChild(profileImg)
 
@@ -36,7 +36,7 @@ const stopCallingIcon = createElement('div', 'stop-calling', 'stop-calling-icon'
 
 const stopCallingFilling = createElement('div', 'stop-calling-filling', 'stop-calling-filling')
 
-const stopCallingImg = createImg('../midia/call/aceitar_recusar_ligacao.svg')
+const stopCallingImg = createImg('./midia/call/aceitar_recusar_ligacao.svg')
 
 stopCallingFilling.appendChild(stopCallingImg)
 stopCallingIcon.append(stopCallingFilling)

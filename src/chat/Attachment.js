@@ -5,7 +5,7 @@ class Attachment {
     #attachmentIcon
     
     constructor(type, attachmentArray) {
-        this.#attachmentIcon = createMidiaElement('img', '../midia/anexados_icone.svg', ['class', 'attachment-icon'])
+        this.#attachmentIcon = createMidiaElement('img', './midia/anexados_icone.svg', ['class', 'attachment-icon'])
         this.#attachmentContainer = createElement('div', '',  'attachment-container')
         this.type = type
         
@@ -32,7 +32,7 @@ class Attachment {
             attachmentArray.forEach(midia => {
                 const div = createElement('div')
                 const midiaImg = createMidiaElement('img', midia, ['class', 'attached-midia'])
-                const attachedIcon = createMidiaElement('img', '../midia/anexar_icone.svg', ['class', 'attached-icon'])
+                const attachedIcon = createMidiaElement('img', './midia/anexar_icone.svg', ['class', 'attached-icon'])
                 div.append(midiaImg, attachedIcon)
                 this.#attachmentContainer.appendChild(div)
             })

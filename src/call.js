@@ -26,7 +26,7 @@ const callSubtitle = createTextElement('p', 'Ligação recebida')
 
 const profile = createElement('div', 'profile', 'profile')
 
-const profileImg = createImg('../midia/call/ligacao_perfil.svg')
+const profileImg = createImg('./midia/call/ligacao_perfil.svg')
 
 profile.appendChild(profileImg)
 
@@ -36,7 +36,7 @@ const declineCallIcon = createElement('div', 'decline-call', 'decline-call', 'ca
 
 const declineCallFilling = createElement('div', 'decline-call-filling', 'decline-call-filling')
 
-const declineCallImg = createImg('../midia/call/aceitar_recusar_ligacao.svg')
+const declineCallImg = createImg('./midia/call/aceitar_recusar_ligacao.svg')
 
 const declineCallP = createTextElement('p', 'Recusar')
 
@@ -49,7 +49,7 @@ const acceptCallIcon = createElement('div', 'accept-call', 'accept-call', 'call-
 
 const acceptCallFilling = createElement('div', 'accept-call-filling', 'accept-call-filling')
 
-const acceptCallImg = createImg('../midia/call/aceitar_recusar_ligacao.svg')
+const acceptCallImg = createImg('./midia/call/aceitar_recusar_ligacao.svg')
 
 const acceptCallP = createTextElement('p', 'Aceitar')
 

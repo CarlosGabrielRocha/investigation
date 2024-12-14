@@ -55,7 +55,7 @@ function writeEmail(subjectElements, contentElements, attachmentElements, receiv
     sendEmailBody.appendChild(subjectElements)
 
     // Ícone para enviar email
-    const sendIcon = createMidiaElement('img', '../midia/enviar_icone.svg', ['id', 'send'])
+    const sendIcon = createMidiaElement('img', './midia/enviar_icone.svg', ['id', 'send'])
     sendEmailBody.appendChild(sendIcon)
 
     sendIcon.addEventListener('click', () => {

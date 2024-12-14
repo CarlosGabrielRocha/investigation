@@ -26,7 +26,7 @@ const callTitle = createTextElement('h1')
 
 const profile = createElement('div', 'active-call-profile', 'active-call-profile')
 
-const profileImg = createImg('../midia/call/ligacao_perfil.svg')
+const profileImg = createImg('./midia/call/ligacao_perfil.svg')
 
 profile.appendChild(profileImg)
 
@@ -36,7 +36,7 @@ const mutecallIcon = createElement('div', 'mutecall-icon', 'mutecallIcon', 'acti
 
 const mutecallFilling = createElement('div', 'mutecall-filling', 'mutecall-filling', 'active-call-icon-filling')
 
-const mutecallImg = createImg('../midia/call/ligacao_mutar.svg')
+const mutecallImg = createImg('./midia/call/ligacao_mutar.svg')
 
 const mutecallP = createTextElement('p', 'Mutar')
 
@@ -49,7 +49,7 @@ const keyboardIcon = createElement('div', 'keyboard-icon', 'keyboard-icon', 'act
 
 const keyboardFilling = createElement('div', 'keyboard-filling', 'keyboard-filling', 'active-call-icon-filling')
 
-const keyboardImg = createImg('../midia/call/ligacao_teclado_icone.svg')
+const keyboardImg = createImg('./midia/call/ligacao_teclado_icone.svg')
 
 const keyboardP = createTextElement('p', 'Teclado')
 
@@ -62,7 +62,7 @@ const speakerphoneIcon = createElement('div', 'speakerphone-icon', 'speakerphone
 
 const speakerphoneFilling = createElement('div', 'speakerphone-filling', 'speakerphone-filling', 'active-call-icon-filling')
 
-const speakerphoneImg = createImg('../midia/call/ligacao_vivavoz.svg')
+const speakerphoneImg = createImg('./midia/call/ligacao_vivavoz.svg')
 
 const speakerphoneP = createTextElement('p', 'Viva-voz')
 
@@ -75,7 +75,7 @@ const finishCallIcon = createElement('div', 'finish-call', 'finish-call', 'activ
 
 const finishCallFilling = createElement('div', 'finish-call-filling', 'finish-call-filling')
 
-const finishCallImg = createImg('../midia/call/aceitar_recusar_ligacao.svg')
+const finishCallImg = createImg('./midia/call/aceitar_recusar_ligacao.svg')
 
 const finishCallP = createTextElement('p')
 
