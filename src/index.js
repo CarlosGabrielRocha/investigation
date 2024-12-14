@@ -37,7 +37,7 @@ cameraEvents()
 
 
 let calls = [] // {key, value}
-let sentEmails = []
+export let sentEmails = []
 let receivedEmails = []
 let notifications = []
 
@@ -47,6 +47,7 @@ export function updateStorageArrays() {
     calls = []
     sentEmails = []
     notifications = []
+    receivedEmails = []
     for (let c = 1; c < localStorage.length; c++) {
         const key = localStorage.key(c - 1)
         if (key === `stalker-call_00${c}`) {
@@ -61,7 +62,7 @@ export function updateStorageArrays() {
     }
 }
 
-updateStorageArrays()
+
 
 ////////////////////// LIGAÇÕES //////////////////////////
 
@@ -95,63 +96,51 @@ if (localStorage.getItem('stalker-call_001') === 'pending') {
 
 ////////////////////// NOTIFICAÇÕES //////////////////////////
 
- if (!localStorage.getItem('notifications_001')) {
-    localStorage.setItem('notifications_001', 'pending')
+//
+
+if (!localStorage.getItem('notifications_004')) {
+    localStorage.setItem('notifications_004', 'pending')
 }
 
-if (localStorage.getItem('notifications_001') === 'pending') {
-    document.addEventListener('click', () => {
-    newNotification('Você tem novas mensagens!')
-    localStorage.setItem('notifications_001', 'ok')
-    }, {once: true})
+if (localStorage.getItem('notifications_004') === 'pending') {
+    setTimeout(() => {
+        newNotification('Você tem novas mensagens!')
+        localStorage.setItem('notifications_004', 'ok')
+    }, 1000 * 60)     
 } 
 
 //
 
-if (!localStorage.getItem('notifications_002')) {
-    localStorage.setItem('notifications_002', 'pending')
+if (!localStorage.getItem('notifications_005')) {
+    localStorage.setItem('notifications_005', 'pending')
 }
 
-if (localStorage.getItem('notifications_002') === 'pending') {
+if (localStorage.getItem('notifications_005') === 'pending') {
     setTimeout(() => {
         newNotification('Você tem novas mensagens!')
-        localStorage.setItem('notifications_002', 'ok')
-    }, 1000 * 90)     
+        localStorage.setItem('notifications_005', 'ok')
+    }, 1000 * 68)     
 } 
-
-//
-
-if (!localStorage.getItem('notifications_003')) {
-    localStorage.setItem('notifications_003', 'pending')
-}
-
-if (localStorage.getItem('notifications_003') === 'pending') {
-    setTimeout(() => {
-        newNotification('Você tem novas mensagens!')
-        localStorage.setItem('notifications_003', 'ok')
-    }, 1000 * 120)     
-} 
-
 
 ////////////////////// EMAILS ENVIADOS //////////////////////////
 
 // Criar envio de Email (só pode haver um email por vez)
 // O LocalStorage é atualizado na função writeEmail passando a chave.
 
-/*  if (!localStorage.getItem('email_001')) {
+if (!localStorage.getItem('email_001')) {  
     localStorage.setItem('email_001', 'pending')
+    updateStorageArrays()
 }
- */
-
-
-/* if (localStorage.getItem('email_001') === 'pending') {
-    const writedEmail = new Email('sent', 'O que foi isso??', ['Eu acho que aqui não é tão seguro como você disse.. O que era aquela coisa?'])
-
+ 
+if (localStorage.getItem('email_001') === 'pending' && localStorage.getItem('stalker-email_003') === 'ok') {
+    const writedEmail = new Email('sent', 'Quem é você???', ['Me deixa em paz! O que eu te fiz??'])
     const writeEmailIcon = document.querySelector('#escrever-email')
     writeEmailIcon.addEventListener('click', () => {
-        writeEmail(writedEmail.subject, writedEmail.content, writedEmail.attachment, Profile.profiles.hacker, 'email_001')
+        writeEmail(writedEmail.subject, writedEmail.content, writedEmail.attachment, Profile.profiles.stalker, 'email_001')
     }, { once: true })
-} */
+}  
+
+
 
 
 

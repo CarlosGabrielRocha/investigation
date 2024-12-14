@@ -16,32 +16,40 @@ eyes.newEmail('received', '👁️', ['Ele não é maravilhoso?'])   */
 
 //stalker-email_001
 
-if (!localStorage.getItem('stalker-email_001')) {
-    localStorage.setItem('stalker-email_001', 'pending')
-} else {
-    stalker.newEmail('received', '', ['Oi, por que você está fugindo de mim? Só quero conversar.'])
-}
-
-if (localStorage.getItem('stalker-email_001') === 'pending') {
-    setTimeout(() => {
-        stalker.newEmail('received', '', ['Oi, por que você está fugindo de mim? Só quero conversar.'])
-        localStorage.setItem('stalker-email_001', 'ok')
-        stalker.selectProfile()
-    }, 1000 * 90)    
-} 
+stalker.newEmail('received', '', ['Oi, por que você está fugindo de mim? Só quero conversar.'])
 
 //stalker-email_002
 
-if (!localStorage.getItem('stalker-email_002')) {
-    localStorage.setItem('stalker-email_002', 'pending')
+stalker.newEmail('received', '', ['Por que você fez isso? Por que escondeu ele de mim? Me diga.'])
+
+//stalker-email_003
+
+if (!localStorage.getItem('stalker-email_003')) {
+    localStorage.setItem('stalker-email_003', 'pending')
 } else {
-    stalker.newEmail('received', '', ['Por que você fez isso? Por que escondeu ele de mim? Me diga.'])
+    stalker.newEmail('received', '', ['Eu estava lá.'])
 }
 
-if (localStorage.getItem('stalker-email_002') === 'pending') {
+if (localStorage.getItem('stalker-email_003') === 'pending') {
     setTimeout(() => {
-        stalker.newEmail('received', '', ['Por que você fez isso? Por que escondeu ele de mim? Me diga.'])
-        localStorage.setItem('stalker-email_002', 'ok')
+        stalker.newEmail('received', '', ['Eu estava lá.'])
+        localStorage.setItem('stalker-email_003', 'ok')
         stalker.selectProfile()
-    }, 1000 * 120)  
+    }, 1000 * 60)  
 } 
+
+//stalker-email_004
+
+if (!localStorage.getItem('stalker-email_004')) {
+    localStorage.setItem('stalker-email_004', 'pending')
+} else {
+    stalker.newEmail('received', '', [''], './midia/chat/archives/iseeyou.mp4')
+}
+
+if (localStorage.getItem('stalker-email_004') === 'pending') {
+    setTimeout(() => {
+        stalker.newEmail('received', '', [''], './midia/chat/archives/iseeyou.mp4')
+        localStorage.setItem('stalker-email_004', 'ok')
+        stalker.selectProfile()
+    }, 1000 * 68)  
+}

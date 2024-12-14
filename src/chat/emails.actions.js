@@ -43,7 +43,7 @@ function emptyEmailBody() {
 // Email para enviar 
 
 function writeEmail(subjectElements, contentElements, attachmentElements, receiver, emailKey) { 
-
+    
     // Remetente
     const receiverContainer = createElement('div', 'receiver-container')
     const receiverSpan = createTextElement('span')
@@ -102,12 +102,20 @@ function renderEmailsPreview(profile) {
 
 // Notifica o usuário caso não tenha um email a ser enviado.
 
+import { sentEmails } from "../index.js"
+
 const writeEmailIcon = document.querySelector('#escrever-email')
 
-writeEmailIcon.addEventListener('click', () => {
-    if (sendEmailBody.innerHTML === '') {
+/* writeEmailIcon.addEventListener('click', () => {
+    console.log(sentEmails)
+    const emailToSend = sentEmails.filter(email => {
+        console.log(email)
+        return email.value === 'pending'
+    })
+    if (!emailToSend[0]) {
+        console.log(emailToSend)
         newNotification('Você não tem o que enviar no momento!')
     }
 })
-
+ */
 export { displayEmail, writeEmail, renderEmailsPreview }
