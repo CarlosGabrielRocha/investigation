@@ -1,0 +1,35 @@
+{
+  "name": "investigation",
+  "version": "1.1.0",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/CarlosGabrielRocha/investigation#readme",
+  "bugs": {
+    "url": "https://github.com/CarlosGabrielRocha/investigation/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CarlosGabrielRocha/investigation.git"
+  },
+  "license": "ISC",
+  "author": "Carlos Gabriel",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "dev": "webpack-dev-server"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.13"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
+    "mini-css-extract-plugin": "^2.9.1",
+    "style-loader": "^4.0.0",
+    "webpack": "^5.94.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.1.0"
+  }
+}

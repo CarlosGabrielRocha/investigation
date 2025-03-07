@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation 2025</title>
+    <link rel="shortcut icon" href="./midia/investigation-icon.svg" type="image/svg+xml">
+    <style>
+        /* Telefone */
+        main {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width: 270px;
+            height: 560px;
+            filter: brightness(110%);
+        }
+
+        main img {
+            user-select: none;
+            pointer-events: none;
+        }
+    </style>
+    <link rel="stylesheet" href="index.css">
+    <script src="bundle.min.js" defer></script>
+</head>
+
+<body>
+
+    <main>
+        <img src="./midia/phone.svg" alt="phone">
+
+        <section id="topo">
+            <img src="./midia/bateria.svg" alt="bateria">
+            <p id="hora"></p>
+            <p id="data"></p>
+        </section>
+
+        <section id="icones">
+            <div class="icone" id="notas" data-screen="notas">
+
+                <div class="imagemIcone ativo" id="imagemNotas"><img src="./midia/notas.svg" alt="notas"></div>
+
+            </div>
+            <div class="icone" id="mapa" data-screen="mapa">
+
+                <div class="imagemIcone inativo"><img src="./midia/mapa.svg" alt="mapa"></div>
+
+            </div>
+            <div class="icone" id="discar" data-screen="discar">
+
+                <div class="imagemIcone ativo"><img src="./midia/lista.svg" alt="lista"></div>
+
+            </div>
+            <div class="icone" id="missoes" data-screen="missoes">
+
+                <div class="imagemIcone inativo"><img src="./midia/missoes.svg" alt="missoes"></div>
+
+            </div>
+            <div class="icone" id="delegacia">
+                <a href="https://vigilanciaoculta.vercel.app/" target="_blank">
+                    <div class="imagemIcone ativo"><img src="./midia/delegacia.svg" alt="delegacia"></div>
+                </a>
+            </div>
+            <div class="icone" id="vulture" data-screen="vulture">
+                <a href="#">
+                    <div class="imagemIcone inativo"><img src="./midia/vulture.svg" alt="vulture"></div>
+                </a>
+            </div>
+            <div class="icone" id="cameras" data-screen="cameras">
+
+                <div class="imagemIcone ativo"><img src="./midia/cameras.svg" alt="camera"></div>
+
+            </div>
+            <div class="icone" id="chat" data-screen="chat">
+
+                <div class="imagemIcone ativo"><img src="./midia/chat.svg" alt="chat"></div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- Telas  -->
+
+    <!-- Tela câmeras -->
+
+    <section id="telaCameras" class="tela" data-screen="cameras">
+
+        <div class="telaTopo">
+            <img src="./midia/seta-direita.svg" alt="seta-direita" id="proximo" class="botao mudar-camera">
+            <img src="./midia/seta-esquerda.svg" alt="seta-esquerda" id="voltar" class="botao mudar-camera">
+            <img src="./midia/fechar.svg" alt="sair" class="botao sair" data-screen="cameras">
+        </div>
+        <p>Câmera 1</p>
+        <div id="area-camera" class="telaCentro">
+            <video src="./midia/camera0.mp4" id="camera" preload="auto" loop></video>
+        </div>
+
+    </section>
+
+    <!-- Tela notas -->
+
+    <section id="telaNotas" class="tela" data-screen="notas">
+
+        <div class="telaTopo">
+            <img src="./midia/fechar.svg" alt="sair" class="botao sair" data-screen="notas">
+        </div>
+
+        <div id="area-notas" class="telaCentro">
+            <div class="nota">
+                <img src="./midia/pasta_notas.svg" alt="notas">
+                <p>Note 1</p>
+            </div>
+            <div class="nota">
+                <img src="./midia/pasta_notas.svg" alt="notas">
+                <p>Note 2</p>
+            </div>
+            <div class="nota">
+                <img src="./midia/pasta_notas.svg" alt="notas">
+                <p>Note 3</p>
+            </div>
+            <div class="nota">
+                <img src="./midia/pasta_notas.svg" alt="notas">
+                <p>Note 4</p>
+            </div>
+            <div class="nota">
+                <img src="./midia/pasta_notas.svg" alt="notas">
+                <p>Note 5</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Tela puzzles -->
+
+    <section id="telaMiniGames" class="tela" data-screen="missoes">
+
+        <div class="telaTopo">
+            <img src="./midia/fechar.svg" alt="sair" class="botao sair" data-screen="missoes">
+        </div>
+
+        <div id="area-puzzle" class="telaCentro">
+            <div>
+                <img src="./midia/labirinto.svg" alt="Labirinto1">
+                <p>Puzzle 1</p>
+            </div>
+            <div>
+                <img src="./midia/labirinto.svg" alt="Labirinto2">
+                <p>Puzzle 2</p>
+            </div>
+            <div>
+                <img src="./midia/labirinto.svg" alt="Labirinto3">
+                <p>Puzzle 3</p>
+            </div>
+            <div>
+                <img src="./midia/labirinto.svg" alt="Labirinto4">
+                <p>Puzzle 4</p>
+            </div>
+            <div>
+                <img src="./midia/labirinto.svg" alt="Labirinto5">
+                <p>Puzzle 5</p>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Tela discar -->
+
+    <section id="telaDiscar" class="tela" data-screen="discar">
+
+        <div class="telaTopo">
+            <img src="./midia/fechar.svg" alt="sair" class="botao sair" id="telaDiscar-sair" data-screen="discar">
+        </div>
+
+        <div id="area-discar" class="telaCentro">
+
+            <div id="discados"><input type="text" id="discados-input" maxlength="11" disabled></div>
+
+            <div id="digitos">
+                <div data-digit="1" class="digito-caixa">
+                    <span class="digito">1</span>
+                    <span class="outros-digitos"><img src="./midia/correiro_de_voz.svg" alt="Correiro de voz"></span>
+                </div>
+                <div data-digit="2" class="digito-caixa">
+                    <span class="digito">2</span>
+                    <span class="outros-digitos">ABC</span>
+                </div>
+                <div data-digit="3" class="digito-caixa">
+                    <span class="digito">3</span>
+                    <span class="outros-digitos">DEF</span>
+                </div>
+                <div data-digit="4" class="digito-caixa">
+                    <span class="digito">4</span>
+                    <span class="outros-digitos">GHI</span>
+                </div>
+                <div data-digit="5" class="digito-caixa">
+                    <span class="digito">5</span>
+                    <span class="outros-digitos">JKL</span>
+                </div>
+                <div data-digit="6" class="digito-caixa">
+                    <span class="digito">6</span>
+                    <span class="outros-digitos">MNO</span>
+                </div>
+                <div data-digit="7" class="digito-caixa">
+                    <span class="digito">7</span>
+                    <span class="outros-digitos">PQRS</span>
+                </div>
+                <div data-digit="8" class="digito-caixa">
+                    <span class="digito">8</span>
+                    <span class="outros-digitos">TUV</span>
+                </div>
+                <div data-digit="9" class="digito-caixa">
+                    <span class="digito">9</span>
+                    <span class="outros-digitos">WXYZ</span>
+                </div>
+                <div data-digit="*" class="digito-caixa">
+                    <span class="digito">*</span>
+                </div>
+                <div data-digit="0" class="digito-caixa">
+                    <span class="digito">0</span>
+                    <span class="outros-digitos">+</span>
+                </div>
+                <div data-digit="#" class="digito-caixa">
+                    <span class="digito">#</span>
+                </div>
+            </div>
+
+            <div id="area-discar-opcoes">
+                <div id="ligar">
+                    <img src="./midia/call/aceitar_recusar_ligacao.svg" alt="ligar">
+                </div>
+                <div id="apagar-digito">
+                    <img src="./midia/call/excluir_digito_icone.svg" alt="Excluir digito">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Tela chat -->
+
+    <section id="telaChat" class="tela" data-screen="chat">
+
+        <div class="telaTopo" id="telaChatTopo">
+            <img src="./midia/fechar.svg" alt="sair" class="botao sair" data-screen="chat">
+        </div>
+
+        <div id="area-chat" class="telaCentro">
+            <div id="chat-perfis">
+            </div>
+            <div id="chat-emails">
+                <div id="escrever-email">
+                    <img src="./midia/enviar_email.svg" alt="Enviar Email">
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Rodapé -->
+
+    <footer>
+        <p>Desenvolvido por Carlos Gabriel</p>
+    </footer>
+
+</body>
+
+</html>
