@@ -2,14 +2,14 @@
 
 @font-face {
     font-family: 'cameras';
-    src: url('../../public/fontes/RobotoMono.ttf') format('TrueType');
+    src: url('../../docs/fontes/RobotoMono.ttf') format('TrueType');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'montserrat';
-    src: url('../../public/fontes/Montserrat.ttf') format('TrueType');
+    src: url('../../docs/fontes/Montserrat.ttf') format('TrueType');
 }
 
 @keyframes flutuar {
@@ -105,7 +105,7 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
     background-color: black;
-    background-image: url('../../public/midia/ceu.webp');
+    background-image: url('../../docs/midia/ceu.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right bottom;
